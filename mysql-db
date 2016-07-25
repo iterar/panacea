@@ -1,0 +1,10 @@
+# Create user that has access to database
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+
+GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+
+# Create database
+CREATE DATABASE dbname;
+
+# Grant privileges for user to access newly created database
+GRANT ALL PRIVILEGES ON dbname . * TO 'newuser'@'localhost';
